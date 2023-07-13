@@ -1,5 +1,5 @@
-from restframework import serializers
+from rest_framework import serializers
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = __all__
+        fields = '__all__'
