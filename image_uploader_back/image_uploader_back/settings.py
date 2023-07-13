@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -133,3 +133,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS authorization
 
 CORS_ALLOWED_ORIGINS = []
+
+# Allowed Hosts
+
+ALLOWED_HOSTS = [
+    '8000-vicuartas23-imageupload-khgc46blsox.ws-us101.gitpod.io'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-vicuartas23-imageupload-khgc46blsox.ws-us101.gitpod.io'
+]
