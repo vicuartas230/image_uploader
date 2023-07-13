@@ -6,5 +6,5 @@ router = routers.DefaultRouter()
 router.register(r'images', views.ImageView, 'images')
 
 urlpatterns = [
-    path('api/v1', include(router.urls))
+    path('api/v1/', include(router.urls))
 ]

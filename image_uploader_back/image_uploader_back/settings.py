@@ -137,7 +137,8 @@ CORS_ALLOWED_ORIGINS = []
 # Allowed Hosts
 
 ALLOWED_HOSTS = [
-    '8000-vicuartas23-imageupload-khgc46blsox.ws-us101.gitpod.io'
+    '8000-vicuartas23-imageupload-khgc46blsox.ws-us101.gitpod.io',
+    '127.0.0.1'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
