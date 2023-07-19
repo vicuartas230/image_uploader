@@ -1,5 +1,5 @@
+import { Card } from "../Components/card";
+
 export function UploadImage() {
-    return (
-        <div>Upload Image</div>
-    )
+    return <Card />
 }
