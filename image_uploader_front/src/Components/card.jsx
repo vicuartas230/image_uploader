@@ -1,9 +1,21 @@
 // import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { DragDrop } from "./fileUploader";
+import { getAllImages } from "../api/images.api";
 
 export function Card() {
 	const { register, handleSubmit } = useForm();
+	const [images, setImages] = useState([]);
+
+	useEffect(() => {
+		async function getImages() {
+			const res = await getAllImages();
+			setImages(res.data);
+		}
+		getImages();
+	}, [])
+
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
@@ -19,6 +31,11 @@ export function Card() {
 				<p>Or</p>
 				{/* <button to='/uploadingImage'>Choose a file</button> */}
 			</form>
+			{images.map(image => (
+				<div>
+					{image.image_file}
+				</div>
+			))}
 		</div>
 	)
 }

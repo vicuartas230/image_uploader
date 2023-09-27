@@ -1,8 +1,9 @@
 from django.db import models
+import os
 
 class Image(models.Model):
-    name = models.CharField(max_length=200)
-    image_file = models.FileField(upload_to="uploads/")
+    image_file = models.ImageField(upload_to="uploads/")
+    date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return os.path.basename(self.image_file.name)

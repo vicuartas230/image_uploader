@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'image_uploader_back.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "image_uploader_database",
+        "NAME": "image_uploader_database_oamy",
         "USER": "image_uploader_database_user",
-        "PASSWORD": "tNU0I8JThUf4NsWq8Mn02Dbh3zEA4W0D",
-        "HOST": "dpg-cinfladph6ei90e96cv0-a.singapore-postgres.render.com",
+        "PASSWORD": "RfyMWBog1y15axNX50oOBEwLGwHAaDS8",
+        "HOST": "dpg-ck9vonev3ddc739clv80-a.oregon-postgres.render.com",
         "PORT": "5432",
     }
 }
@@ -133,13 +133,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS authorization
 
-CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:5173']
 
 # Allowed Hosts
 
 ALLOWED_HOSTS = [
     '8000-vicuartas23-imageupload-khgc46blsox.ws-us101.gitpod.io',
-    '127.0.0.1'
+    '127.0.0.1',
+    'localhost'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
