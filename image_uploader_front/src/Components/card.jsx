@@ -22,13 +22,12 @@ export function Card() {
 				<h1>Upload your image</h1>
 				<p>File should be Jpeg, PNG, ...</p>
 				<DragDrop />
+				<p>Or</p>
 				<input
 					type="file"
 					accept="image/*"
-					placeholder="Drag & Drop your image here"
 					{ ...register('image', { required: true }) }
 				/>
-				<p>Or</p>
 				{/* <button to='/uploadingImage'>Choose a file</button> */}
 			</form>
 			{images.map(image => (

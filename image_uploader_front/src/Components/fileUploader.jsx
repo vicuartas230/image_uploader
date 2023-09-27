@@ -9,6 +9,6 @@ export function DragDrop() {
         setFile(file);
     };
     return (
-        <FileUploader handleChange={handleChange} name='file' types={fileTypes} label='File should be...' />
+        <FileUploader handleChange={handleChange} name='file' types={fileTypes} label='Drag & Drop your image here' />
     );
 }
